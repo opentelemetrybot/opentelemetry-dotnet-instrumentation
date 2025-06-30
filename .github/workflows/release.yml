@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-22.04
     needs: [ build, build-container, build-nuget-packages ]
     permissions:
-      contents: write
+      contents: write # required for creating releases
     timeout-minutes: 10
     steps:
 
