@@ -16,6 +16,8 @@ jobs:
     name: Update .NET installation script
     runs-on: ubuntu-24.04
     if: github.event.repository.fork == false
+    permissions:
+      contents: write # required for pushing changes
 
     env:
       DOTNET_INSTALL_SCRIPT_URL: 'https://dot.net/v1/dotnet-install.sh'
